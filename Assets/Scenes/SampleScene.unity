@@ -788,6 +788,7 @@ Transform:
   m_Children:
   - {fileID: 71200665}
   - {fileID: 1565147049}
+  - {fileID: 1308620032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40272446
@@ -5006,13 +5007,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14139341, y: 0.69282603, z: -0.14139341, w: 0.69282603}
-  m_LocalPosition: {x: -2.3719997, y: 2.7259998, z: -1.03}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 523636261}
-  m_LocalEulerAnglesHint: {x: 23.069, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6956,7 +6957,7 @@ Transform:
   m_GameObject: {fileID: 523636257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.198, y: 0.394, z: 0}
+  m_LocalPosition: {x: 22.4, y: 0.394, z: -28.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16490,9 +16491,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308620031}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.876788, y: 1.120789, z: -11.455256}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.19753575, y: 4.867546, z: -0.22910513}
+  m_LocalScale: {x: 0.02, y: 2.521432, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1446129100}
@@ -16554,7 +16555,7 @@ Transform:
   - {fileID: 1935951758}
   - {fileID: 156472430}
   - {fileID: 1364233541}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 32459952}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316307601
 GameObject:
@@ -28640,4 +28641,3 @@ SceneRoots:
   - {fileID: 32459952}
   - {fileID: 523636261}
   - {fileID: 627621206}
-  - {fileID: 1308620032}
