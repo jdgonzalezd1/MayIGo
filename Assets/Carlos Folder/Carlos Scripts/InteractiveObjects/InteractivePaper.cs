@@ -6,6 +6,7 @@ public class InteractivePaper : MonoBehaviour
 {
     public void ActivarObjeto()
     {
+        GameManager.Instance.PaperTake();
         Destroy(gameObject);
     }
 }

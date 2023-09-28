@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class Selected : MonoBehaviour
@@ -39,6 +41,16 @@ public class Selected : MonoBehaviour
                     hit.collider.transform.GetComponent<InteractivePaper>().ActivarObjeto();
                 }
             }
+
+            if (hit.collider.tag == "Door")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //hit.collider.transform.GetComponent<SCRIPT>().FUNCION();
+                    hit.collider.transform.GetComponent<InteractiveDoor>().ActivarObjeto();
+                }
+            }
+
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distancia, Color.red);
         }
         else
@@ -49,7 +61,7 @@ public class Selected : MonoBehaviour
 
     void SelectedObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.green;
+        transform.GetComponent<MeshRenderer>().material.color = Color.gray;
         ultimoReconocido = transform.gameObject;
     }
 
