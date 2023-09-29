@@ -5,7 +5,6 @@ using UnityEngine;
 public class AxisXBox : MonoBehaviour
 {
     private InteractiveBox box;
-    RigidbodyConstraints rigidbodyConstraints;
     private void Start()
     {
         box = GetComponentInParent<InteractiveBox>();
@@ -14,16 +13,19 @@ public class AxisXBox : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            rigidbodyConstraints = box.boxRigidbody.constraints;
             box.boxRigidbody.constraints = RigidbodyConstraints.FreezeRotation | 
                                            RigidbodyConstraints.FreezePositionY |
                                            RigidbodyConstraints.FreezePositionZ;
+        }
+        else
+        {
+            box.boxRigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        box.boxRigidbody.constraints = rigidbodyConstraints;
+        box.boxRigidbody.constraints = RigidbodyConstraints.FreezeAll;
         box.DesactivarEmpuje();
     }
 }

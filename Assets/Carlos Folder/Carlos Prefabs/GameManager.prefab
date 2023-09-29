@@ -47,4 +47,4 @@ MonoBehaviour:
   poopCountdown: 0
   initialPoopCountdown: 0
   isPaperTaken: 0
-  initialValue: 30
+  initialValue: 60

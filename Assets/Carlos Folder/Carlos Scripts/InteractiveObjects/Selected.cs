@@ -13,6 +13,7 @@ public class Selected : MonoBehaviour
     // UI Variables
     public Texture2D puntero;
     public GameObject TextDetect;
+    public GameObject BoxDetect;
     GameObject ultimoReconocido = null;
 
 
@@ -20,6 +21,7 @@ public class Selected : MonoBehaviour
     {
         mask = LayerMask.GetMask("RaycastDetect");
         TextDetect.SetActive(false);
+        BoxDetect.SetActive(false);
     }
 
     private void Update()
@@ -101,11 +103,19 @@ public class Selected : MonoBehaviour
 
         if (ultimoReconocido)
         {
-            TextDetect.SetActive(true);
+            if(ultimoReconocido.tag == "Box")
+            {
+                BoxDetect.SetActive(true);
+            }
+            else
+            {
+                TextDetect.SetActive(true);
+            }
         }
         else
         {
             TextDetect.SetActive(false);
+            BoxDetect.SetActive(false);
         }
     }
 }
