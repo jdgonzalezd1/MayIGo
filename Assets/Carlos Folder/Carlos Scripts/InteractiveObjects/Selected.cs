@@ -51,6 +51,20 @@ public class Selected : MonoBehaviour
                 }
             }
 
+            if (hit.collider.tag == "Box")
+            {
+                if (Input.GetKey(KeyCode.E))
+                {
+                    //hit.collider.transform.GetComponent<SCRIPT>().FUNCION();
+                    hit.collider.transform.GetComponent<InteractiveBox>().ActivarEmpuje();
+                }
+                else
+                {
+                    hit.collider.transform.GetComponent<InteractiveBox>().DesactivarEmpuje();
+
+                }
+            }
+
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distancia, Color.red);
         }
         else
@@ -70,6 +84,12 @@ public class Selected : MonoBehaviour
         if (ultimoReconocido)
         {
             ultimoReconocido.GetComponent<Renderer>().material.color = Color.white;
+
+            if (ultimoReconocido.GetComponent<InteractiveBox>())
+            {
+                ultimoReconocido.GetComponent<InteractiveBox>().DesactivarEmpuje();
+            }
+
             ultimoReconocido = null;
         }
     }

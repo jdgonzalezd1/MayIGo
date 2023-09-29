@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01cc3276b5380e43803cc0cfc2376b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poopCountdown: 0
+  initialPoopCountdown: 0
+  isPaperTaken: 0
+  initialValue: 30
