@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int initialPoopCountdown;
     public bool isPaperTaken = false;
     public int initialValue = 30;
+    //public PoopBar toleranceBar;
 
     private void Awake()
     {
@@ -34,12 +35,14 @@ public class GameManager : MonoBehaviour
         poopCountdown = initialValue;
         initialPoopCountdown = initialValue;
         isPaperTaken = false;
+        //toleranceBar.SetMaxHealth(initialPoopCountdown);
         InvokeRepeating("PoopTolerance", 0, 1.0f);
     }
 
     public void PoopTolerance()
     {
         poopCountdown--;
+        //toleranceBar.SetHealth(poopCountdown);
 
         if(poopCountdown < 1)
         {
