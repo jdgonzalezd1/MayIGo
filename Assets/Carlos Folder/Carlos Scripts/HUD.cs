@@ -7,8 +7,11 @@ public class HUD : MonoBehaviour
 {
     public static HUD Instance;
 
-    public Image countdownBar;
+    public PoopBar toleranceBar;
+
     public Image paperImage;
+
+    public GameObject gameOverPanel;
 
     private void Awake()
     {
@@ -27,13 +30,21 @@ public class HUD : MonoBehaviour
     void Start()
     {
         paperImage.gameObject.SetActive(false);
+        gameOverPanel.SetActive(false);
+        toleranceBar.SetMaxHealth(GameManager.Instance.InitialPoopCountdown);
+        InvokeRepeating("ToleranceCountdown", 0, 1.0f);
+
     }
 
-    
-    void Update()
+    public void ToleranceCountdown()
     {
-        countdownBar.fillAmount = (float)GameManager.Instance.PoopCountdown / GameManager.Instance.InitialPoopCountdown;
-        
+        toleranceBar.SetHealth(GameManager.Instance.PoopCountdown);
+
+        if (GameManager.Instance.PoopCountdown < 1)
+        {
+            gameOverPanel.SetActive(true);
+            CancelInvoke();
+        }
     }
 
     public void ActivePaperIcon()
