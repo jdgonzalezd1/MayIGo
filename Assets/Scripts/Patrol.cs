@@ -9,6 +9,7 @@ public class Patrol : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    [SerializeField] private float stopTime = 5f;
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class Patrol : MonoBehaviour
     {
         agent.isStopped = true;
         agent.speed = 0f;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(stopTime);
         agent.isStopped = false; 
         agent.speed = 3f;
         Debug.Log("I worked");
