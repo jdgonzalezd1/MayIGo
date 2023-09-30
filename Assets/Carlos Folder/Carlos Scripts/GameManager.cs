@@ -60,4 +60,9 @@ public class GameManager : MonoBehaviour
             HUD.Instance.ActivePaperIcon();
         }
     }
+
+    public void modifyCount(int time)
+    {
+        this.poopCountdown -= time;
+    }
 }
