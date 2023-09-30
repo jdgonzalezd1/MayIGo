@@ -51013,6 +51013,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181197898}
   m_Mesh: {fileID: 1916953974655270940, guid: f1cd6800d51724d4291ee22764292e86, type: 3}
+--- !u!114 &1182735537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3529471304701080376, guid: 94bbb389b95397040a36e7f06fd3165f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2071292292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184543506
 GameObject:
   m_ObjectHideFlags: 0
@@ -91646,6 +91658,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1536115697374572011, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536115697374572011, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.43945074
+      objectReference: {fileID: 0}
     - target: {fileID: 1624307351570273951, guid: 94bbb389b95397040a36e7f06fd3165f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -91751,6 +91773,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 3529471304701080376, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ff214742516c4c45bd27ab47bc511bb,
+        type: 3}
+    - target: {fileID: 3804448544858601548, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804448544858601548, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804448544858601548, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6189228142551826479, guid: 94bbb389b95397040a36e7f06fd3165f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -91761,6 +91804,46 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: poopImage
+      value: 
+      objectReference: {fileID: 1182735537}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ff214742516c4c45bd27ab47bc511bb,
+        type: 3}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 441d1712d7249f54999926da1797254b,
+        type: 3}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: a57575fa807babd4ea92f4de7205e324,
+        type: 3}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: c4946db363d10374c80f44087aaff3fe,
+        type: 3}
+    - target: {fileID: 6794037616951035889, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: emojiIcon.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: c68d67b6215654846b6114227e5b2cfb,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
