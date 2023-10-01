@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int initialPoopCountdown;
     [SerializeField] private GameObject gameOver;
     public bool isPaperTaken = false;
-    public int initialValue = 30;
+    public int initialValue;
     //public PoopBar toleranceBar;
-
+    
     private void Awake()
     {
         if (Instance != null)
@@ -27,17 +27,18 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
 
-    private void Start()
-    {
         Time.timeScale = 1.0f;
-
         poopCountdown = initialValue;
         initialPoopCountdown = initialValue;
         isPaperTaken = false;
         //toleranceBar.SetMaxHealth(initialPoopCountdown);
         InvokeRepeating("PoopTolerance", 0, 1.0f);
+    }
+    
+    private void Start()
+    {
+        
     }
 
     public void PoopTolerance()
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Demasiado tarde. Te has cagado!");
             gameOver.SetActive(true);
             Time.timeScale = 0.0f;
-            CancelInvoke();
+            CancelInvoke("PoopTolerance");
         }
     }
 

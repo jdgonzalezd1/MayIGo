@@ -20,6 +20,8 @@ public class HUD : MonoBehaviour
 
     public GameObject janitorWarning;
 
+    public GameManager gameManager;
+
     private void Awake()
     {
         if (Instance != null)
@@ -32,33 +34,39 @@ public class HUD : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
 
-    void Start()
-    {
+        gameManager = FindAnyObjectByType<GameManager>();
+
         paperImage.gameObject.SetActive(false);
         gameOverPanel.SetActive(false);
         bossWarning.SetActive(false);
         janitorWarning.SetActive(false);
+
         //toleranceBar.SetMaxHealth(GameManager.Instance.InitialPoopCountdown);
         Invoke("SetMaxHealth", 0.1f);
         InvokeRepeating("ToleranceCountdown", 0.2f, 1.0f);
         poopImage.sprite = emojiIcon[0];
     }
 
-    public void SetMaxHealth()
+    void Start()
     {
-        toleranceBar.SetMaxHealth(GameManager.Instance.InitialPoopCountdown);
+        
+    }
+
+    public void SetMaxHealth()
+    {        
+        toleranceBar.SetMaxHealth(gameManager.InitialPoopCountdown);        
     }
 
     public float HealthPercentage()
     {
-        return ((float)GameManager.Instance.PoopCountdown / GameManager.Instance.InitialPoopCountdown) * 100;
+        return ((float)gameManager.PoopCountdown / gameManager.InitialPoopCountdown) * 100;
     }
 
     public void ToleranceCountdown()
     {
-        toleranceBar.SetHealth(GameManager.Instance.PoopCountdown);
+        toleranceBar.SetHealth(gameManager.PoopCountdown);
+        Debug.Log(gameManager.PoopCountdown + " HUD Countdown");
 
         float actualHealth = HealthPercentage();
 
@@ -78,12 +86,13 @@ public class HUD : MonoBehaviour
         {
             poopImage.sprite = emojiIcon[4];
         }
-
-        if (GameManager.Instance.PoopCountdown < 1)
-        {
+        
+        if (gameManager.PoopCountdown < 1)
+        {            
             gameOverPanel.SetActive(true);
-            CancelInvoke();
+            CancelInvoke("ToleranceCountdown");
         }
+        
     }
 
     public void ActivePaperIcon()
