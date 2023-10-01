@@ -26,14 +26,15 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         Time.timeScale = 1.0f;
-        poopCountdown = initialValue;
+        setPoopCountdown(initialValue);
         initialPoopCountdown = initialValue;
         isPaperTaken = false;
         //toleranceBar.SetMaxHealth(initialPoopCountdown);
         InvokeRepeating("PoopTolerance", 0, 1.0f);
+        Debug.Log(poopCountdown);
     }
     
     private void Start()
@@ -67,5 +68,15 @@ public class GameManager : MonoBehaviour
     public void modifyCount(int time)
     {
         this.poopCountdown -= time;
+    }
+
+    public void setPoopCountdown(int initialValue)
+    {
+        this.poopCountdown = initialValue;
+    }
+
+    public int getPoopCountdown()
+    {
+        return this.poopCountdown;
     }
 }
