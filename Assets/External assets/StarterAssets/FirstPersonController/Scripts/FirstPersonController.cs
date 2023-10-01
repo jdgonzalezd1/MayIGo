@@ -51,6 +51,10 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
+		[Header("UI Component")]
+		[Tooltip("HUD component")]
+		public HUD hud;
+
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -104,7 +108,7 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+			hud = FindAnyObjectByType<HUD>();
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
@@ -115,6 +119,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			DetectUIHandleCursor();
 		}
 
 		private void LateUpdate()
@@ -263,6 +268,20 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		private void DetectUIHandleCursor()
+		{
+			if (hud.gameOverPanel.activeInHierarchy)
+			{
+				Cursor.visible = true; 
+				Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
 		}
 	}
 }

@@ -16,6 +16,10 @@ public class HUD : MonoBehaviour
 
     public GameObject gameOverPanel;
 
+    public GameObject bossWarning;
+
+    public GameObject janitorWarning;
+
     private void Awake()
     {
         if (Instance != null)
@@ -34,6 +38,8 @@ public class HUD : MonoBehaviour
     {
         paperImage.gameObject.SetActive(false);
         gameOverPanel.SetActive(false);
+        bossWarning.SetActive(false);
+        janitorWarning.SetActive(false);
         //toleranceBar.SetMaxHealth(GameManager.Instance.InitialPoopCountdown);
         Invoke("SetMaxHealth", 0.1f);
         InvokeRepeating("ToleranceCountdown", 0.2f, 1.0f);

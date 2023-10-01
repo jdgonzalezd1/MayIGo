@@ -7,6 +7,20 @@ public class MenuInicial : MonoBehaviour
 {
     public void Jugar()
     {
+        /*
+        if(SceneManager.GetActiveScene().name == "MainScene")
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+        else
+        {
+        }
+        */
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void StartMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

@@ -6,10 +6,12 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Patrol : MonoBehaviour
 {
-    public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+
     [SerializeField] private float stopTime = 5f;
+
+    public Transform[] points;
 
     private void Start()
     {
@@ -23,8 +25,7 @@ public class Patrol : MonoBehaviour
     {        
         if (points.Length == 0) return;
         agent.destination = points[destPoint].position;
-        destPoint = (destPoint + 1) % points.Length;
-        Debug.Log("Next point succeded");
+        destPoint = (destPoint + 1) % points.Length;        
     }
 
     IEnumerator StayInPosition()
@@ -33,8 +34,7 @@ public class Patrol : MonoBehaviour
         agent.speed = 0f;
         yield return new WaitForSeconds(stopTime);
         agent.isStopped = false; 
-        agent.speed = 3f;
-        Debug.Log("I worked");
+        agent.speed = 3f;        
     }
 
     private void FixedUpdate()
@@ -43,8 +43,7 @@ public class Patrol : MonoBehaviour
         {
             if (gameObject.CompareTag("Janitor"))
             {                
-                StartCoroutine(StayInPosition());
-                Debug.Log("I finish my patrol");
+                StartCoroutine(StayInPosition());               
             }
             GotoNextPoint();
 

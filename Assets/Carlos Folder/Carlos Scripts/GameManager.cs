@@ -5,11 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public int PoopCountdown { get { return poopCountdown;} }
+    public int PoopCountdown { get { return poopCountdown; } }
     public int InitialPoopCountdown { get { return initialPoopCountdown; } }
 
     [SerializeField] private int poopCountdown;
     [SerializeField] private int initialPoopCountdown;
+    [SerializeField] private GameObject gameOver;
     public bool isPaperTaken = false;
     public int initialValue = 30;
     //public PoopBar toleranceBar;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
         if(poopCountdown < 1)
         {
             Debug.Log("Demasiado tarde. Te has cagado!");
+            gameOver.SetActive(true);
             Time.timeScale = 0.0f;
             CancelInvoke();
         }
