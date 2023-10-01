@@ -18,7 +18,7 @@ public class Patrol : MonoBehaviour
 
     [SerializeField] private float stopTime = 5f;
 
-    public Transform[] points;
+   
 
     private void Start()
     {
@@ -33,20 +33,20 @@ public class Patrol : MonoBehaviour
 
     void GotoNextPoint()
     {
-        myAnim.Play("mixamo_com");
+        
         if (points.Length == 0) return;
         agent.destination = points[destPoint].position;
         destPoint = (destPoint + 1) % points.Length;        
     }
 
     IEnumerator StayInPosition()
-    {
-        
-        agent.isStopped = true;
-        myAnim.Play("Look Around");
+    {        
+        agent.isStopped = true;        
         agent.speed = 0f;
+        myAnim.Play("Look Around");
         yield return new WaitForSeconds(stopTime);
-        agent.isStopped = false; 
+        agent.isStopped = false;
+        myAnim.Play("mixamo_com");
         agent.speed = 3f;        
     }
 
