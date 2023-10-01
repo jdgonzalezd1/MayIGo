@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
     public void Jugar()
     {
         

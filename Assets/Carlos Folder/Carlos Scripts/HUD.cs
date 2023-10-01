@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,11 +46,6 @@ public class HUD : MonoBehaviour
         poopImage.sprite = emojiIcon[0];
     }
 
-    void Start()
-    {
-        
-    }
-
     public void SetMaxHealth()
     {        
         toleranceBar.SetMaxHealth(gameManager.InitialPoopCountdown);        
@@ -89,6 +82,9 @@ public class HUD : MonoBehaviour
         if (gameManager.PoopCountdown < 1)
         {            
             gameOverPanel.SetActive(true);
+
+            //Cursor.lockState = CursorLockMode.None;
+
             CancelInvoke("ToleranceCountdown");
         }
         

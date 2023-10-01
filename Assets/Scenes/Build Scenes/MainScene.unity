@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31790,6 +31790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913520546005541805, guid: c45576ed540f96947b2bd50d6e04af50,
         type: 3}
+      propertyPath: puntero
+      value: 
+      objectReference: {fileID: 2800000, guid: d0e19d99ba3a0b44face2b9185d71f1a, type: 3}
+    - target: {fileID: 8913520546005541805, guid: c45576ed540f96947b2bd50d6e04af50,
+        type: 3}
       propertyPath: BoxDetect
       value: 
       objectReference: {fileID: 542034594}
@@ -46113,6 +46118,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3676819387345242477, guid: 89b36d8d09b0f4f459eabad06d90f920,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614228291364637685, guid: 89b36d8d09b0f4f459eabad06d90f920,
+        type: 3}
+      propertyPath: noPaperMessage
+      value: 
+      objectReference: {fileID: 2071292293}
     - target: {fileID: 6527009751228668548, guid: 89b36d8d09b0f4f459eabad06d90f920,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92025,6 +92040,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94bbb389b95397040a36e7f06fd3165f, type: 3}
+--- !u!1 &2071292293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3751044086043003817, guid: 94bbb389b95397040a36e7f06fd3165f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2071292292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2071292296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2546070268030896908, guid: 94bbb389b95397040a36e7f06fd3165f,
