@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         isPaperTaken = false;
         //toleranceBar.SetMaxHealth(initialPoopCountdown);
         InvokeRepeating("PoopTolerance", 0, 1.0f);
-        Debug.Log(poopCountdown);
     }
     
     private void Start()

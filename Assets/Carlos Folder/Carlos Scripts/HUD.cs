@@ -65,8 +65,7 @@ public class HUD : MonoBehaviour
 
     public void ToleranceCountdown()
     {
-        toleranceBar.SetHealth(gameManager.PoopCountdown);
-        Debug.Log(gameManager.PoopCountdown + " HUD Countdown");
+        toleranceBar.SetHealth(gameManager.PoopCountdown);        
 
         float actualHealth = HealthPercentage();
 
