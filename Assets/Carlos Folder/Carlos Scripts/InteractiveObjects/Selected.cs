@@ -10,6 +10,8 @@ public class Selected : MonoBehaviour
     public Texture2D puntero;
     public GameObject TextDetect;
     public GameObject BoxDetect;
+
+    public float xPuntero, yPuntero;
     GameObject ultimoReconocido = null;
 
 
@@ -94,7 +96,7 @@ public class Selected : MonoBehaviour
 
     private void OnGUI()
     {
-        Rect rect = new Rect(Screen.width / 2, Screen.height / 2, puntero.width, puntero.height);
+        Rect rect = new Rect(Screen.width/2.5f, Screen.height/3, xPuntero, yPuntero);
         GUI.DrawTexture(rect, puntero);
 
         if (ultimoReconocido)

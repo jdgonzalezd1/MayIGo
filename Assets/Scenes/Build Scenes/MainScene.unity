@@ -34076,6 +34076,16 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: d0e19d99ba3a0b44face2b9185d71f1a, type: 3}
     - target: {fileID: 8913520546005541805, guid: c45576ed540f96947b2bd50d6e04af50,
         type: 3}
+      propertyPath: xPuntero
+      value: 133
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913520546005541805, guid: c45576ed540f96947b2bd50d6e04af50,
+        type: 3}
+      propertyPath: yPuntero
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 8913520546005541805, guid: c45576ed540f96947b2bd50d6e04af50,
+        type: 3}
       propertyPath: BoxDetect
       value: 
       objectReference: {fileID: 542034594}
@@ -62934,7 +62944,7 @@ PrefabInstance:
     - target: {fileID: 1746903731147026546, guid: 92fa16099f9c63647883731c978a391c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: -15.53
       objectReference: {fileID: 0}
     - target: {fileID: 1746903731147026546, guid: 92fa16099f9c63647883731c978a391c,
         type: 3}
@@ -62944,7 +62954,7 @@ PrefabInstance:
     - target: {fileID: 1746903731147026546, guid: 92fa16099f9c63647883731c978a391c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.5
+      value: -7.28
       objectReference: {fileID: 0}
     - target: {fileID: 1746903731147026546, guid: 92fa16099f9c63647883731c978a391c,
         type: 3}
@@ -98856,6 +98866,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888415350001333454, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_text
+      value: There is no toilet paper!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888415350001333454, guid: 94bbb389b95397040a36e7f06fd3165f,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 22.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
